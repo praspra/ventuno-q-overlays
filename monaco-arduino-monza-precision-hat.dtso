@@ -1,0 +1,24 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ *
+ * Device tree overlay for the Waveshare High-Precision AD HAT (ADS1263)
+ * connected to the Monza 40-pin JHAT connector.
+ */
+/dts-v1/;
+/plugin/;
+
+#include <dt-bindings/gpio/gpio.h>
+
+&spi3 {
+	#address-cells = <1>;
+	#size-cells = <0>;
+	cs-gpios = <&tlmm 90 GPIO_ACTIVE_LOW>;
+
+	spidev@0 {
+		compatible = "rohm,dh2228fv";
+		reg = <0>;
+		spi-max-frequency = <8000000>;
+		spi-cpha;
+	};
+};

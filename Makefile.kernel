@@ -1,0 +1,12 @@
+monaco-arduino-monza-precision-hat-dtbs := \
+	monaco-arduino-monza.dtb \
+	monaco-arduino-monza-precision-hat.dtbo
+
+dtb-$(CONFIG_ARCH_QCOM) += monaco-arduino-monza-precision-hat.dtb
+
+# Pimoroni Automation HAT
+monaco-arduino-monza-automation-hat-dtbs := \
+	monaco-arduino-monza.dtb \
+	monaco-arduino-monza-automation-hat.dtbo
+
+dtb-$(CONFIG_ARCH_QCOM) += monaco-arduino-monza-automation-hat.dtb
